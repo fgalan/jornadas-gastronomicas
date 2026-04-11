@@ -24,7 +24,7 @@ Usage examples
 
 JSON config format (all keys optional):
   {
-    "onedrive_docs":  "~/OneDrive/Documents",
+    "dir":  "~/OneDrive/Documents",
     "excel_filename": "trips.xlsx",
     "excel_path":     "~/OneDrive/Documents/trips.xlsx",
     "table_name":     "Jornadas",
@@ -48,9 +48,9 @@ import openpyxl
 
 # ── Built-in defaults ──────────────────────────────────────────────────────────
 DEFAULTS = {
-    "onedrive_docs":  os.path.expanduser("~/OneDrive/Documents"),
+    "dir":  os.path.expanduser("~/OneDrive/Documents"),
     "excel_filename": "your_file.xlsx",
-    "excel_path":     None,   # derived from onedrive_docs + excel_filename if not set
+    "excel_path":     None,   # derived from dir + excel_filename if not set
     "table_name":     "Jornadas",
     "coords_col":     "Coords",
     "output_map":     "mapa_jornadas.html",
@@ -97,12 +97,12 @@ def build_config() -> dict:
         "--config", metavar="FILE",
         help="Path to a JSON config file. Individual CLI args override its values.",
     )
-    parser.add_argument("--onedrive_docs",  metavar="DIR",
-                        help="Path to your OneDrive Documents folder.")
+    parser.add_argument("--dir",  metavar="DIR",
+                        help="Path to the folder where the excel file is placed. Using '~' for home directories is allowed.")
     parser.add_argument("--excel_filename", metavar="FILE",
-                        help="Excel filename (looked up inside onedrive_docs).")
+                        help="Excel filename (looked up inside 'dir').")
     parser.add_argument("--excel_path",     metavar="PATH",
-                        help="Full path to the Excel file (overrides onedrive_docs + excel_filename).")
+                        help="Full path to the Excel file (overrides dir + excel_filename).")
     parser.add_argument("--table_name",     metavar="NAME",
                         help="Name of the Excel table or sheet to read.")
     parser.add_argument("--coords_col",     metavar="COL",
@@ -136,7 +136,7 @@ def build_config() -> dict:
     # Derive excel_path if not explicitly set
     if not cfg["excel_path"]:
         cfg["excel_path"] = os.path.join(
-            os.path.expanduser(cfg["onedrive_docs"]),
+            os.path.expanduser(cfg["dir"]),
             cfg["excel_filename"],
         )
     else:
