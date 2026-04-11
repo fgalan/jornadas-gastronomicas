@@ -3,25 +3,147 @@
 #
 # Author: Pedro José Navarro
 
-import pandas as pd
-import folium
-from folium.plugins import HeatMap
+"""
+map_jornadas.py  –  Plot geo-coordinates from an Excel table onto a folium map.
+
+Configuration priority (highest → lowest):
+  1. Individual CLI arguments (--excel_filename, --table_name, …)
+  2. JSON config file passed via --config
+  3. Built-in defaults
+
+Usage examples
+--------------
+# Use a JSON config file:
+  python map_jornadas.py --config settings.json
+
+# Pass parameters directly on the command line:
+  python map_jornadas.py --excel_filename trips.xlsx --show_heatmap false
+
+# Mix both (CLI overrides JSON):
+  python map_jornadas.py --config settings.json --show_markers false
+
+JSON config format (all keys optional):
+  {
+    "onedrive_docs":  "~/OneDrive/Documents",
+    "excel_filename": "trips.xlsx",
+    "excel_path":     "~/OneDrive/Documents/trips.xlsx",
+    "table_name":     "Jornadas",
+    "coords_col":     "Coords",
+    "output_map":     "mapa_jornadas.html",
+    "show_markers":   true,
+    "show_heatmap":   true
+  }
+"""
+
+import argparse
+import json
 import os
 import sys
 
-# ── Configuration ──────────────────────────────────────────────────────────────
-ONEDRIVE_DOCS  = os.path.expanduser("~/OneDrive/Documents")
-EXCEL_FILENAME = "JornadasGastronomicas.xlsx"          
-EXCEL_PATH     = os.path.join(ONEDRIVE_DOCS, EXCEL_FILENAME)
-TABLE_NAME     = "Jornadas"                # Named table inside the workbook
-COORDS_COL     = "Coords"                  # Column with "lat,lon" values
-OUTPUT_MAP     = "mapa_jornadas.html"      # saved next to the Excel file
+import folium
+from folium.plugins import HeatMap
+import pandas as pd
+import openpyxl
 
-# ── Map mode ───────────────────────────────────────────────────────────────────
-# Set either or both to True:
-SHOW_MARKERS = True
-SHOW_HEATMAP = True
+
+# ── Built-in defaults ──────────────────────────────────────────────────────────
+DEFAULTS = {
+    "onedrive_docs":  os.path.expanduser("~/OneDrive/Documents"),
+    "excel_filename": "your_file.xlsx",
+    "excel_path":     None,   # derived from onedrive_docs + excel_filename if not set
+    "table_name":     "Jornadas",
+    "coords_col":     "Coords",
+    "output_map":     "mapa_jornadas.html",
+    "show_markers":   True,
+    "show_heatmap":   True,
+}
 # ───────────────────────────────────────────────────────────────────────────────
+
+
+def parse_bool(value: str) -> bool:
+    """Accept true/false/1/0/yes/no (case-insensitive) from CLI strings."""
+    if isinstance(value, bool):
+        return value
+    if value.lower() in ("true", "1", "yes"):
+        return True
+    if value.lower() in ("false", "0", "no"):
+        return False
+    raise argparse.ArgumentTypeError(f"Boolean value expected, got: {value!r}")
+
+
+def load_config(config_path: str) -> dict:
+    """Load and return a JSON config file, expanding ~ in path values."""
+    with open(config_path) as f:
+        data = json.load(f)
+    # Expand ~ in any string values
+    for key, val in data.items():
+        if isinstance(val, str):
+            data[key] = os.path.expanduser(val)
+    return data
+
+
+def build_config() -> dict:
+    """
+    Merge defaults → JSON config → CLI args, in increasing priority order.
+    Returns a fully resolved config dict.
+    """
+    parser = argparse.ArgumentParser(
+        description="Plot geo-coordinates from an Excel table onto a folium map.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=__doc__,
+    )
+
+    parser.add_argument(
+        "--config", metavar="FILE",
+        help="Path to a JSON config file. Individual CLI args override its values.",
+    )
+    parser.add_argument("--onedrive_docs",  metavar="DIR",
+                        help="Path to your OneDrive Documents folder.")
+    parser.add_argument("--excel_filename", metavar="FILE",
+                        help="Excel filename (looked up inside onedrive_docs).")
+    parser.add_argument("--excel_path",     metavar="PATH",
+                        help="Full path to the Excel file (overrides onedrive_docs + excel_filename).")
+    parser.add_argument("--table_name",     metavar="NAME",
+                        help="Name of the Excel table or sheet to read.")
+    parser.add_argument("--coords_col",     metavar="COL",
+                        help='Column containing "lat,lon" coordinates. '
+                             f'(default: {DEFAULTS["coords_col"]})')
+    parser.add_argument("--output_map",     metavar="FILE",
+                        help="Output HTML filename, saved next to the Excel file. "
+                             f'(default: {DEFAULTS["output_map"]})')
+    parser.add_argument("--show_markers",   metavar="BOOL", type=parse_bool,
+                        help=f'Show individual markers. true/false (default: {DEFAULTS["show_markers"]})')
+    parser.add_argument("--show_heatmap",   metavar="BOOL", type=parse_bool,
+                        help=f'Show heatmap layer. true/false (default: {DEFAULTS["show_heatmap"]})')
+
+    args = parser.parse_args()
+
+    # Start from built-in defaults
+    cfg = dict(DEFAULTS)
+
+    # Layer JSON config on top
+    if args.config:
+        json_cfg = load_config(args.config)
+        cfg.update(json_cfg)
+
+    # Layer explicit CLI args on top (only those the user actually provided)
+    cli_overrides = {
+        key: val for key, val in vars(args).items()
+        if key != "config" and val is not None
+    }
+    cfg.update(cli_overrides)
+
+    # Derive excel_path if not explicitly set
+    if not cfg["excel_path"]:
+        cfg["excel_path"] = os.path.join(
+            os.path.expanduser(cfg["onedrive_docs"]),
+            cfg["excel_filename"],
+        )
+    else:
+        cfg["excel_path"] = os.path.expanduser(cfg["excel_path"])
+
+    return cfg
+
 
 
 def find_excel_file(path: str) -> str:
@@ -35,11 +157,11 @@ def find_excel_file(path: str) -> str:
             for f in xlsx_files:
                 print(f"  • {f}")
     sys.exit(f"\n❌  File not found: {path}\n"
-             f"    Update EXCEL_FILENAME at the top of this script and try again.")
+             f"    Set --excel_filename (or --excel_path) to the correct value.")
 
 
 def load_table(excel_path: str, table_name: str) -> pd.DataFrame:
-    import openpyxl
+    
     wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=False)
 
     for ws in wb.worksheets:
@@ -72,7 +194,7 @@ def parse_coords(value) -> tuple[float, float] | None:
 def build_map(df: pd.DataFrame, coords_col: str,
               show_markers: bool, show_heatmap: bool) -> folium.Map:
     if not show_markers and not show_heatmap:
-        sys.exit("❌  Both SHOW_MARKERS and SHOW_HEATMAP are False. Enable at least one.")
+        sys.exit("❌  Both show_markers and show_heatmap are False. Enable at least one.")
 
     points = []
     skipped = 0
@@ -80,7 +202,7 @@ def build_map(df: pd.DataFrame, coords_col: str,
     for idx, row in df.iterrows():
         result = parse_coords(row.get(coords_col))
         if result is None:
-            print(f"skipped index: {idx}")
+            # print(f"skipped index: {idx}")
             skipped += 1
             continue
         lat, lon = result
@@ -133,23 +255,25 @@ def build_map(df: pd.DataFrame, coords_col: str,
 
 
 def main():
-    excel_path = find_excel_file(EXCEL_PATH)
-    print(f"📂  Loading '{TABLE_NAME}' from:\n    {excel_path}")
+    cfg = build_config()
 
-    df = load_table(excel_path, TABLE_NAME)
+    excel_path = find_excel_file(cfg["excel_path"])
+    print(f"📂  Loading '{cfg['table_name']}' from:\n    {excel_path}")
+
+    df = load_table(excel_path, cfg["table_name"])
     print(f"✅  Loaded {len(df)} rows. Columns: {list(df.columns)}")
 
-    if COORDS_COL not in df.columns:
-        sys.exit(f"\n❌  Column '{COORDS_COL}' not found.\n"
+    if cfg["coords_col"] not in df.columns:
+        sys.exit(f"\n❌  Column '{cfg['coords_col']}' not found.\n"
                  f"    Available columns: {list(df.columns)}")
 
     modes = []
-    if SHOW_MARKERS: modes.append("markers")
-    if SHOW_HEATMAP: modes.append("heatmap")
+    if cfg["show_markers"]: modes.append("markers")
+    if cfg["show_heatmap"]:  modes.append("heatmap")
     print(f"🗺️   Rendering: {' + '.join(modes)}")
 
-    output_path = os.path.join(os.path.dirname(excel_path), OUTPUT_MAP)
-    m = build_map(df, COORDS_COL, SHOW_MARKERS, SHOW_HEATMAP)
+    output_path = os.path.join(os.path.dirname(excel_path), cfg["output_map"])
+    m = build_map(df, cfg["coords_col"], cfg["show_markers"], cfg["show_heatmap"])
     m.save(output_path)
     print(f"✅  Map saved → {output_path}")
     print("    Open it in any web browser to view your points.")
