@@ -42,7 +42,7 @@ There are no demanding hardware requirements. The script runs comfortably on any
 ## Input Data Requirements
 
 - **File format:** `.xlsx` or `.xlsm` (Excel workbook)
-- **Location:** By default, looked up in `~/OneDrive/Documents/`. Configurable via `--onedrive_docs`, `--excel_filename`, or `--excel_path`.
+- **Location:** By default, looked up in `~/OneDrive/Documents/`. Configurable via `--dir`, `--excel_filename`, or `--excel_path`.
 - **Table:** A named Excel table (Insert → Table in Excel) called `Jornadas` by default. A sheet with that name is also accepted as a fallback.
 - **Coordinates column:** A column named `Coords` by default, containing entries in `"latitude,longitude"` format (e.g. `43.2630,−2.9350`). Rows with missing or malformed values are skipped with a warning.
 
@@ -60,8 +60,8 @@ Parameters can be set in three ways, listed from highest to lowest priority:
 
 | Parameter        | Required | Default                    | Description                                              |
 |------------------|----------|----------------------------|----------------------------------------------------------|
-| `onedrive_docs`  | Yes      | `~/OneDrive/Documents`     | Folder where the Excel file is located                   |
-| `excel_filename` | Yes      | `your_file.xlsx`           | Excel filename within `onedrive_docs`                    |
+| `dir`  | Yes      | `~/OneDrive/Documents`     | Folder where the Excel file is located                   |
+| `excel_filename` | Yes      | `your_file.xlsx`           | Excel filename within `dir`                    |
 | `excel_path`     | No       | derived from above         | Full path to the Excel file; overrides the two above     |
 | `table_name`     | Yes      | `Jornadas`                 | Name of the Excel table or sheet to read                 |
 | `coords_col`     | No       | `Coords`                   | Column containing `"lat,lon"` coordinate strings         |
@@ -79,7 +79,7 @@ python map_jornadas.py --excel_filename my_trips.xlsx
 
 # Full CLI
 python map_jornadas.py \
-  --onedrive_docs ~/Documents \
+  --dir ~/Documents \
   --excel_filename my_trips.xlsx \
   --table_name Jornadas \
   --output_map map.html \
@@ -96,7 +96,7 @@ python map_jornadas.py --config settings.json --show_heatmap false
 ### Example `settings.json`
 ```json
 {
-  "onedrive_docs":  "~/OneDrive/Documents",
+  "dir":  "~/OneDrive/Documents",
   "excel_filename": "my_trips.xlsx",
   "table_name":     "Jornadas",
   "coords_col":     "Coords",
