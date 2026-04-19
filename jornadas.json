@@ -1,0 +1,8 @@
+{
+	"excel_path":     "~/OneDrive/Documents/JornadasGastronomicas.xlsx",
+	"table_name":     "Jornadas",
+	"coords_col":     "Coords",
+	"output_map":     "mapa_jornadas.html",
+	"show_markers":   true,
+	"show_heatmap":   false
+}
