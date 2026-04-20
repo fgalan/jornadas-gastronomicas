@@ -1,0 +1,2468 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_097e8e8b68a2502be71187bda0af30dc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_097e8e8b68a2502be71187bda0af30dc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_097e8e8b68a2502be71187bda0af30dc = L.map(
+                "map_097e8e8b68a2502be71187bda0af30dc",
+                {
+                    center: [40.43503004194959, -3.6952264937133372],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_aa2d63a7932986b279319fc71389824d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_aa2d63a7932986b279319fc71389824d.addTo(map_097e8e8b68a2502be71187bda0af30dc);
+        
+    
+            var feature_group_6323ab5a86ccaf86daa4847060146a95 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_43d1e97eb213b8afa5076975a16dfe52 = L.marker(
+                [40.379810662031026, -3.6229668862897695],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_ae31d4922175f31c0bf9cea372f17d04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_73f5729655920c0c7771c3e3c70ae945 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ba60f4cc999d693084b40b4a5b598cf0 = $(`<div id="html_ba60f4cc999d693084b40b4a5b598cf0" style="width: 100.0%; height: 100.0%;"><b>Número:</b> I<br><b>Lugar:</b> La Mercé<br><b>Estilo:</b> De mercado<br><b>Fecha:</b> 2018-06-08 00:00:00<br><b>Días entre jornadas:</b> -<br><b>Ronda:</b> 1.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_73f5729655920c0c7771c3e3c70ae945.setContent(html_ba60f4cc999d693084b40b4a5b598cf0);
+            
+        
+
+        marker_43d1e97eb213b8afa5076975a16dfe52.bindPopup(popup_73f5729655920c0c7771c3e3c70ae945)
+        ;
+
+        
+    
+    
+            marker_43d1e97eb213b8afa5076975a16dfe52.bindTooltip(
+                `<div>
+                     (40.37981, -3.62297)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_43d1e97eb213b8afa5076975a16dfe52.setIcon(icon_ae31d4922175f31c0bf9cea372f17d04);
+            
+    
+            var marker_fd48a2f3fb8b91d980480611cdb94397 = L.marker(
+                [40.464066453185, -3.693297058402232],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_42c29f831cae5181c4df5abc3c3854f7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_031cb34d3614e6e54ad05b050f45441d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4bed9f6edfa0647e22fdb1340404f079 = $(`<div id="html_4bed9f6edfa0647e22fdb1340404f079" style="width: 100.0%; height: 100.0%;"><b>Número:</b> II<br><b>Lugar:</b> Casa Juan<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2018-07-07 00:00:00<br><b>Días entre jornadas:</b> 29<br><b>Ronda:</b> 1.0<br><b>Pax:</b> 7.0<br><b>Anécdotas:</b> Jose Antonio ganó el sorteo, pero luego no eligió. Eligió Roberto, por estar sentado a su derecha</div>`)[0];
+                popup_031cb34d3614e6e54ad05b050f45441d.setContent(html_4bed9f6edfa0647e22fdb1340404f079);
+            
+        
+
+        marker_fd48a2f3fb8b91d980480611cdb94397.bindPopup(popup_031cb34d3614e6e54ad05b050f45441d)
+        ;
+
+        
+    
+    
+            marker_fd48a2f3fb8b91d980480611cdb94397.bindTooltip(
+                `<div>
+                     (40.46407, -3.69330)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fd48a2f3fb8b91d980480611cdb94397.setIcon(icon_42c29f831cae5181c4df5abc3c3854f7);
+            
+    
+            var marker_3c28a456f4682ad45a19e644f8f7de24 = L.marker(
+                [40.42622472364123, -3.6843085076928674],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_d46ec2860c5da8309e7d526a6c66616f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fea5605e9aa1b0a2f5f3f34bd5918094 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_311606287287d1292f509b2969061410 = $(`<div id="html_311606287287d1292f509b2969061410" style="width: 100.0%; height: 100.0%;"><b>Número:</b> III<br><b>Lugar:</b> Loft 39<br><b>Estilo:</b> De autor<br><b>Fecha:</b> 2018-08-31 00:00:00<br><b>Días entre jornadas:</b> 55<br><b>Ronda:</b> 1.0<br><b>Pax:</b> 5.0</div>`)[0];
+                popup_fea5605e9aa1b0a2f5f3f34bd5918094.setContent(html_311606287287d1292f509b2969061410);
+            
+        
+
+        marker_3c28a456f4682ad45a19e644f8f7de24.bindPopup(popup_fea5605e9aa1b0a2f5f3f34bd5918094)
+        ;
+
+        
+    
+    
+            marker_3c28a456f4682ad45a19e644f8f7de24.bindTooltip(
+                `<div>
+                     (40.42622, -3.68431)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c28a456f4682ad45a19e644f8f7de24.setIcon(icon_d46ec2860c5da8309e7d526a6c66616f);
+            
+    
+            var marker_95117c0d4fce4c379f3d08467359b208 = L.marker(
+                [40.57010802944083, -3.9247733406244683],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_376516e77d0f2c25a30790860dc5fa95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_706f2e42639abadf1ac21644e614f1e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65c43ca6483659ebabde480fa10d9294 = $(`<div id="html_65c43ca6483659ebabde480fa10d9294" style="width: 100.0%; height: 100.0%;"><b>Número:</b> IV<br><b>Lugar:</b> Trasgu<br><b>Estilo:</b> Asturiano<br><b>Fecha:</b> 2018-11-03 00:00:00<br><b>Días entre jornadas:</b> 64<br><b>Ronda:</b> 1.0<br><b>Pax:</b> 6.0</div>`)[0];
+                popup_706f2e42639abadf1ac21644e614f1e2.setContent(html_65c43ca6483659ebabde480fa10d9294);
+            
+        
+
+        marker_95117c0d4fce4c379f3d08467359b208.bindPopup(popup_706f2e42639abadf1ac21644e614f1e2)
+        ;
+
+        
+    
+    
+            marker_95117c0d4fce4c379f3d08467359b208.bindTooltip(
+                `<div>
+                     (40.57011, -3.92477)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_95117c0d4fce4c379f3d08467359b208.setIcon(icon_376516e77d0f2c25a30790860dc5fa95);
+            
+    
+            var marker_33db3fa54bfcd5b4036746522903482a = L.marker(
+                [40.46200554000889, -3.695607537607931],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_17694d4f62d394957df65d0225e5bcca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c238ce1b486c4b2fb6c998562a009e06 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1354be807bb43707287999dcc26c491a = $(`<div id="html_1354be807bb43707287999dcc26c491a" style="width: 100.0%; height: 100.0%;"><b>Número:</b> V<br><b>Lugar:</b> Asador Donostierra<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2019-01-19 00:00:00<br><b>Días entre jornadas:</b> 77<br><b>Ronda:</b> 1.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_c238ce1b486c4b2fb6c998562a009e06.setContent(html_1354be807bb43707287999dcc26c491a);
+            
+        
+
+        marker_33db3fa54bfcd5b4036746522903482a.bindPopup(popup_c238ce1b486c4b2fb6c998562a009e06)
+        ;
+
+        
+    
+    
+            marker_33db3fa54bfcd5b4036746522903482a.bindTooltip(
+                `<div>
+                     (40.46201, -3.69561)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_33db3fa54bfcd5b4036746522903482a.setIcon(icon_17694d4f62d394957df65d0225e5bcca);
+            
+    
+            var marker_625933720a909a150dded4fba76fef81 = L.marker(
+                [40.414319139167624, -3.707990505772206],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_0111c2202aedfd4d52a2d41e9966006d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0b3e18d12216f62cf66b1f3affd35a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_863cefe24efc7d01373dab4883686bff = $(`<div id="html_863cefe24efc7d01373dab4883686bff" style="width: 100.0%; height: 100.0%;"><b>Número:</b> VI<br><b>Lugar:</b> Botín<br><b>Estilo:</b> Castellano<br><b>Fecha:</b> 2019-02-09 00:00:00<br><b>Días entre jornadas:</b> 21<br><b>Ronda:</b> 1.0<br><b>Pax:</b> 5.0</div>`)[0];
+                popup_a0b3e18d12216f62cf66b1f3affd35a9.setContent(html_863cefe24efc7d01373dab4883686bff);
+            
+        
+
+        marker_625933720a909a150dded4fba76fef81.bindPopup(popup_a0b3e18d12216f62cf66b1f3affd35a9)
+        ;
+
+        
+    
+    
+            marker_625933720a909a150dded4fba76fef81.bindTooltip(
+                `<div>
+                     (40.41432, -3.70799)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_625933720a909a150dded4fba76fef81.setIcon(icon_0111c2202aedfd4d52a2d41e9966006d);
+            
+    
+            var marker_853a6518230566059bcd444f9b9d13d6 = L.marker(
+                [40.12641140043059, -3.8462840674362666],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_f7bfdad1c3cb89cd29d636fba3eea1ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a33375ace70be16e2ebb492b1c85322c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1ea6a0ffe2728ad2964ed1d885399717 = $(`<div id="html_1ea6a0ffe2728ad2964ed1d885399717" style="width: 100.0%; height: 100.0%;"><b>Número:</b> VII<br><b>Lugar:</b> El Bohio<br><b>Estilo:</b> De autor<br><b>Fecha:</b> 2019-03-31 00:00:00<br><b>Días entre jornadas:</b> 50<br><b>Ronda:</b> 1.0<br><b>Pax:</b> 6.0<br><b>Anécdotas:</b> El siguiente sitio lo eligió Carlos, pero no hubo sorteo</div>`)[0];
+                popup_a33375ace70be16e2ebb492b1c85322c.setContent(html_1ea6a0ffe2728ad2964ed1d885399717);
+            
+        
+
+        marker_853a6518230566059bcd444f9b9d13d6.bindPopup(popup_a33375ace70be16e2ebb492b1c85322c)
+        ;
+
+        
+    
+    
+            marker_853a6518230566059bcd444f9b9d13d6.bindTooltip(
+                `<div>
+                     (40.12641, -3.84628)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_853a6518230566059bcd444f9b9d13d6.setIcon(icon_f7bfdad1c3cb89cd29d636fba3eea1ad);
+            
+    
+            var marker_08459a17d6a5b8b689ae5c2151d69419 = L.marker(
+                [40.46771663165081, -3.6536379900441482],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_425b592f5810331371511d22b46eeb12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c2feae16eb137a4c44458e3765bc23b9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_de1306c0f7fff9444ce3c559b4195c21 = $(`<div id="html_de1306c0f7fff9444ce3c559b4195c21" style="width: 100.0%; height: 100.0%;"><b>Número:</b> VIII<br><b>Lugar:</b> Te Oriental<br><b>Estilo:</b> Asiático<br><b>Fecha:</b> 2019-05-11 00:00:00<br><b>Días entre jornadas:</b> 41<br><b>Ronda:</b> 1.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_c2feae16eb137a4c44458e3765bc23b9.setContent(html_de1306c0f7fff9444ce3c559b4195c21);
+            
+        
+
+        marker_08459a17d6a5b8b689ae5c2151d69419.bindPopup(popup_c2feae16eb137a4c44458e3765bc23b9)
+        ;
+
+        
+    
+    
+            marker_08459a17d6a5b8b689ae5c2151d69419.bindTooltip(
+                `<div>
+                     (40.46772, -3.65364)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08459a17d6a5b8b689ae5c2151d69419.setIcon(icon_425b592f5810331371511d22b46eeb12);
+            
+    
+            var marker_094752855fc85a122785b8db51f07781 = L.marker(
+                [40.41231252809066, -3.7096356259826697],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_29e6529876c39cda4d39a21046736104 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6452e2d3a8c061340e6fdbcc4f22cfb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_defef08179d04bbf4418b17c7611637f = $(`<div id="html_defef08179d04bbf4418b17c7611637f" style="width: 100.0%; height: 100.0%;"><b>Número:</b> IX<br><b>Lugar:</b> Casa Lucio<br><b>Estilo:</b> Castellano<br><b>Fecha:</b> 2019-06-29 00:00:00<br><b>Días entre jornadas:</b> 49<br><b>Ronda:</b> 2.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_a6452e2d3a8c061340e6fdbcc4f22cfb.setContent(html_defef08179d04bbf4418b17c7611637f);
+            
+        
+
+        marker_094752855fc85a122785b8db51f07781.bindPopup(popup_a6452e2d3a8c061340e6fdbcc4f22cfb)
+        ;
+
+        
+    
+    
+            marker_094752855fc85a122785b8db51f07781.bindTooltip(
+                `<div>
+                     (40.41231, -3.70964)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_094752855fc85a122785b8db51f07781.setIcon(icon_29e6529876c39cda4d39a21046736104);
+            
+    
+            var marker_a027e798aa8cb0de841171564acf5393 = L.marker(
+                [40.42989944919919, -3.6786483266767434],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_42dd5b33213176576201c6998df9f085 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_258e21060fd977dada753b0af1b9e942 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f11ca690d8570c86b3da4f0611bcdc7f = $(`<div id="html_f11ca690d8570c86b3da4f0611bcdc7f" style="width: 100.0%; height: 100.0%;"><b>Número:</b> X<br><b>Lugar:</b> Sanxenxo<br><b>Estilo:</b> Gallego<br><b>Fecha:</b> 2019-08-31 00:00:00<br><b>Días entre jornadas:</b> 63<br><b>Ronda:</b> 2.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_258e21060fd977dada753b0af1b9e942.setContent(html_f11ca690d8570c86b3da4f0611bcdc7f);
+            
+        
+
+        marker_a027e798aa8cb0de841171564acf5393.bindPopup(popup_258e21060fd977dada753b0af1b9e942)
+        ;
+
+        
+    
+    
+            marker_a027e798aa8cb0de841171564acf5393.bindTooltip(
+                `<div>
+                     (40.42990, -3.67865)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a027e798aa8cb0de841171564acf5393.setIcon(icon_42dd5b33213176576201c6998df9f085);
+            
+    
+            var marker_51c5f121a5fdf665b3a9887f269d8172 = L.marker(
+                [40.42397235948419, -3.685697215566995],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_45c0fd8378d27261f3068104004b421a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_411c948462cacd5bf417824b13348122 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_22503ab2b7626fbebea60656931c9258 = $(`<div id="html_22503ab2b7626fbebea60656931c9258" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XI<br><b>Lugar:</b> El Paraguas<br><b>Estilo:</b> Asturiano<br><b>Fecha:</b> 2019-10-19 00:00:00<br><b>Días entre jornadas:</b> 49<br><b>Ronda:</b> 2.0<br><b>Pax:</b> 5.0</div>`)[0];
+                popup_411c948462cacd5bf417824b13348122.setContent(html_22503ab2b7626fbebea60656931c9258);
+            
+        
+
+        marker_51c5f121a5fdf665b3a9887f269d8172.bindPopup(popup_411c948462cacd5bf417824b13348122)
+        ;
+
+        
+    
+    
+            marker_51c5f121a5fdf665b3a9887f269d8172.bindTooltip(
+                `<div>
+                     (40.42397, -3.68570)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_51c5f121a5fdf665b3a9887f269d8172.setIcon(icon_45c0fd8378d27261f3068104004b421a);
+            
+    
+            var marker_4d5835e273735ac8002f9f5d396d3684 = L.marker(
+                [40.44309519524308, -3.6822882414346805],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_28b6a3efec37b3d53bb1e1c71b7a198b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_92abf358dd977caef231ae50df7a2fff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ce62e99dfa0b1523464c397b3e7b6947 = $(`<div id="html_ce62e99dfa0b1523464c397b3e7b6947" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XII<br><b>Lugar:</b> Urrechu Velazquez<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2019-11-02 00:00:00<br><b>Días entre jornadas:</b> 14<br><b>Ronda:</b> 2.0<br><b>Pax:</b> 5.0</div>`)[0];
+                popup_92abf358dd977caef231ae50df7a2fff.setContent(html_ce62e99dfa0b1523464c397b3e7b6947);
+            
+        
+
+        marker_4d5835e273735ac8002f9f5d396d3684.bindPopup(popup_92abf358dd977caef231ae50df7a2fff)
+        ;
+
+        
+    
+    
+            marker_4d5835e273735ac8002f9f5d396d3684.bindTooltip(
+                `<div>
+                     (40.44310, -3.68229)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4d5835e273735ac8002f9f5d396d3684.setIcon(icon_28b6a3efec37b3d53bb1e1c71b7a198b);
+            
+    
+            var marker_fb8c1b3bb49b05d05193944be8768189 = L.marker(
+                [40.51806124182326, -3.655303857330146],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_f67dd3466a0ba682a1415de07edad1a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ed5223479a0fc24c4cd38bc0d5a5795 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e27de3819216daaf923377e3d1f1b76 = $(`<div id="html_2e27de3819216daaf923377e3d1f1b76" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XIII<br><b>Lugar:</b> Albufera Morajela<br><b>Estilo:</b> Arroces<br><b>Fecha:</b> 2020-01-25 00:00:00<br><b>Días entre jornadas:</b> 84<br><b>Ronda:</b> 2.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_8ed5223479a0fc24c4cd38bc0d5a5795.setContent(html_2e27de3819216daaf923377e3d1f1b76);
+            
+        
+
+        marker_fb8c1b3bb49b05d05193944be8768189.bindPopup(popup_8ed5223479a0fc24c4cd38bc0d5a5795)
+        ;
+
+        
+    
+    
+            marker_fb8c1b3bb49b05d05193944be8768189.bindTooltip(
+                `<div>
+                     (40.51806, -3.65530)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fb8c1b3bb49b05d05193944be8768189.setIcon(icon_f67dd3466a0ba682a1415de07edad1a8);
+            
+    
+            var marker_6ef8755b7142633b46c4981751ec92fa = L.marker(
+                [40.413050194446626, -3.7087884259823896],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_b99b7f60054e54f6895734c059d60671 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7d9b21d97ec7a01426ef06e658b208d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd5760c31344844e1a34a4a97fd6908b = $(`<div id="html_fd5760c31344844e1a34a4a97fd6908b" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XIV<br><b>Lugar:</b> Julian de Tolosa<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2020-02-22 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 2.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_a7d9b21d97ec7a01426ef06e658b208d.setContent(html_fd5760c31344844e1a34a4a97fd6908b);
+            
+        
+
+        marker_6ef8755b7142633b46c4981751ec92fa.bindPopup(popup_a7d9b21d97ec7a01426ef06e658b208d)
+        ;
+
+        
+    
+    
+            marker_6ef8755b7142633b46c4981751ec92fa.bindTooltip(
+                `<div>
+                     (40.41305, -3.70879)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6ef8755b7142633b46c4981751ec92fa.setIcon(icon_b99b7f60054e54f6895734c059d60671);
+            
+    
+            var marker_d3b4720ea33e40a900709e4132bf2d3d = L.marker(
+                [40.46287764133158, -3.6939307480983112],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_aa4e522b5a5c29d56fb1229d99ea4517 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16f01fb6914b75d52b7e1ce5bb0662dc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_971188e1ddadbce058cd82bda9b5db71 = $(`<div id="html_971188e1ddadbce058cd82bda9b5db71" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XV<br><b>Lugar:</b> Txistu<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2020-06-27 00:00:00<br><b>Días entre jornadas:</b> 126<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 9.0<br><b>Anécdotas:</b> Primera convocatoria el 14/03/2020, día del comienzo del confinamiento. Se pospuso</div>`)[0];
+                popup_16f01fb6914b75d52b7e1ce5bb0662dc.setContent(html_971188e1ddadbce058cd82bda9b5db71);
+            
+        
+
+        marker_d3b4720ea33e40a900709e4132bf2d3d.bindPopup(popup_16f01fb6914b75d52b7e1ce5bb0662dc)
+        ;
+
+        
+    
+    
+            marker_d3b4720ea33e40a900709e4132bf2d3d.bindTooltip(
+                `<div>
+                     (40.46288, -3.69393)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d3b4720ea33e40a900709e4132bf2d3d.setIcon(icon_aa4e522b5a5c29d56fb1229d99ea4517);
+            
+    
+            var marker_1c5bcfb9ccd9093775737816e1c4fbd1 = L.marker(
+                [40.45709854134766, -3.6918729462496236],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_db98f1a31fef3d12b01d8972fe31e061 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_44c5908662eba5b906104bc1289a36f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3871126031accf693165a0aefe0e3626 = $(`<div id="html_3871126031accf693165a0aefe0e3626" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XVI<br><b>Lugar:</b> Teitu<br><b>Estilo:</b> Asturiano<br><b>Fecha:</b> 2020-08-08 00:00:00<br><b>Días entre jornadas:</b> 42<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 6.0</div>`)[0];
+                popup_44c5908662eba5b906104bc1289a36f5.setContent(html_3871126031accf693165a0aefe0e3626);
+            
+        
+
+        marker_1c5bcfb9ccd9093775737816e1c4fbd1.bindPopup(popup_44c5908662eba5b906104bc1289a36f5)
+        ;
+
+        
+    
+    
+            marker_1c5bcfb9ccd9093775737816e1c4fbd1.bindTooltip(
+                `<div>
+                     (40.45710, -3.69187)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1c5bcfb9ccd9093775737816e1c4fbd1.setIcon(icon_db98f1a31fef3d12b01d8972fe31e061);
+            
+    
+            var marker_9bdcaa1e9daa0feec91b3a234d64ccae = L.marker(
+                [40.46262663683855, -3.6921038915808935],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_dbebc229e8203ec5d6443106c14ce3f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_90ac3768621378abdc946d605c7b08bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fe7aa562c05d6d772e083f11630a7cbf = $(`<div id="html_fe7aa562c05d6d772e083f11630a7cbf" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XVII<br><b>Lugar:</b> La Gisandera<br><b>Estilo:</b> Asturiano<br><b>Fecha:</b> 2021-06-19 00:00:00<br><b>Días entre jornadas:</b> 315<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_90ac3768621378abdc946d605c7b08bf.setContent(html_fe7aa562c05d6d772e083f11630a7cbf);
+            
+        
+
+        marker_9bdcaa1e9daa0feec91b3a234d64ccae.bindPopup(popup_90ac3768621378abdc946d605c7b08bf)
+        ;
+
+        
+    
+    
+            marker_9bdcaa1e9daa0feec91b3a234d64ccae.bindTooltip(
+                `<div>
+                     (40.46263, -3.69210)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bdcaa1e9daa0feec91b3a234d64ccae.setIcon(icon_dbebc229e8203ec5d6443106c14ce3f3);
+            
+    
+            var marker_51cbcfe23a3077b68a8f8beef199759a = L.marker(
+                [40.40504384710308, -3.6833510039237543],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_be73dcb5f5654d58c55c5548235c02b8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1f8979205437aa7709de909e80e7a1da = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_edfcdf029f8f749df2577dd712247501 = $(`<div id="html_edfcdf029f8f749df2577dd712247501" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XVIII<br><b>Lugar:</b> Mesón El Segoviano<br><b>Estilo:</b> Castellano<br><b>Fecha:</b> 2021-09-11 00:00:00<br><b>Días entre jornadas:</b> 84<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 10.0</div>`)[0];
+                popup_1f8979205437aa7709de909e80e7a1da.setContent(html_edfcdf029f8f749df2577dd712247501);
+            
+        
+
+        marker_51cbcfe23a3077b68a8f8beef199759a.bindPopup(popup_1f8979205437aa7709de909e80e7a1da)
+        ;
+
+        
+    
+    
+            marker_51cbcfe23a3077b68a8f8beef199759a.bindTooltip(
+                `<div>
+                     (40.40504, -3.68335)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_51cbcfe23a3077b68a8f8beef199759a.setIcon(icon_be73dcb5f5654d58c55c5548235c02b8);
+            
+    
+            var marker_b5e7504ed81b08f5d9691d6d8cc36ad9 = L.marker(
+                [40.464066453185, -3.693297058402232],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_970b78ab4e8d47248366d623419e8d1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b28aa1d5c7942a6922d1f83374de8563 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a48dfc5b92e8f49838f22cee3bbd7881 = $(`<div id="html_a48dfc5b92e8f49838f22cee3bbd7881" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XIX<br><b>Lugar:</b> Casa Juan<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2021-10-23 00:00:00<br><b>Días entre jornadas:</b> 42<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_b28aa1d5c7942a6922d1f83374de8563.setContent(html_a48dfc5b92e8f49838f22cee3bbd7881);
+            
+        
+
+        marker_b5e7504ed81b08f5d9691d6d8cc36ad9.bindPopup(popup_b28aa1d5c7942a6922d1f83374de8563)
+        ;
+
+        
+    
+    
+            marker_b5e7504ed81b08f5d9691d6d8cc36ad9.bindTooltip(
+                `<div>
+                     (40.46407, -3.69330)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5e7504ed81b08f5d9691d6d8cc36ad9.setIcon(icon_970b78ab4e8d47248366d623419e8d1b);
+            
+    
+            var marker_bf51421fab40e3acf4b557c10780ddfa = L.marker(
+                [40.42651618453682, -3.6785889309091444],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_b50b1b496040ff554688bb48f4925cf0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12b11eb62fa548ed1b888fe0df452dea = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b28c693e3e008c5ce65a8b9c9656b676 = $(`<div id="html_b28c693e3e008c5ce65a8b9c9656b676" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XX<br><b>Lugar:</b> La Daniela<br><b>Estilo:</b> Cocido<br><b>Fecha:</b> 2021-11-27 00:00:00<br><b>Días entre jornadas:</b> 35<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 10.0</div>`)[0];
+                popup_12b11eb62fa548ed1b888fe0df452dea.setContent(html_b28c693e3e008c5ce65a8b9c9656b676);
+            
+        
+
+        marker_bf51421fab40e3acf4b557c10780ddfa.bindPopup(popup_12b11eb62fa548ed1b888fe0df452dea)
+        ;
+
+        
+    
+    
+            marker_bf51421fab40e3acf4b557c10780ddfa.bindTooltip(
+                `<div>
+                     (40.42652, -3.67859)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bf51421fab40e3acf4b557c10780ddfa.setIcon(icon_b50b1b496040ff554688bb48f4925cf0);
+            
+    
+            var marker_6397361680cd4a98ad53346b73bc40bd = L.marker(
+                [40.46379538558938, -3.6888685879960903],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_c90c06d947e7b5033a15b31568350f1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acb8bd4f788e35909377ab96b9b453e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a23201c984ede84648ea0c07d409e363 = $(`<div id="html_a23201c984ede84648ea0c07d409e363" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXI<br><b>Lugar:</b> La Maruca<br><b>Estilo:</b> Cántabro<br><b>Fecha:</b> 2022-01-29 00:00:00<br><b>Días entre jornadas:</b> 63<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 12.0<br><b>Anécdotas:</b> XXI Jornada y XXI Grand Slam de Nadal el mismo fin de semana</div>`)[0];
+                popup_acb8bd4f788e35909377ab96b9b453e2.setContent(html_a23201c984ede84648ea0c07d409e363);
+            
+        
+
+        marker_6397361680cd4a98ad53346b73bc40bd.bindPopup(popup_acb8bd4f788e35909377ab96b9b453e2)
+        ;
+
+        
+    
+    
+            marker_6397361680cd4a98ad53346b73bc40bd.bindTooltip(
+                `<div>
+                     (40.46380, -3.68887)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6397361680cd4a98ad53346b73bc40bd.setIcon(icon_c90c06d947e7b5033a15b31568350f1c);
+            
+    
+            var marker_b3e3a1f2f7e840e11dffaa35290af7e0 = L.marker(
+                [40.4267652182012, -3.6673938615936783],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_0fdfe256cd0a1c6e936164f1852de88a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_19aecbeeaecc48b46e67664c2f745520 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3aed4467d3f6b198177e1023a73869f2 = $(`<div id="html_3aed4467d3f6b198177e1023a73869f2" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXII<br><b>Lugar:</b> Terra Celta<br><b>Estilo:</b> Gallego<br><b>Fecha:</b> 2022-02-26 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 11.0</div>`)[0];
+                popup_19aecbeeaecc48b46e67664c2f745520.setContent(html_3aed4467d3f6b198177e1023a73869f2);
+            
+        
+
+        marker_b3e3a1f2f7e840e11dffaa35290af7e0.bindPopup(popup_19aecbeeaecc48b46e67664c2f745520)
+        ;
+
+        
+    
+    
+            marker_b3e3a1f2f7e840e11dffaa35290af7e0.bindTooltip(
+                `<div>
+                     (40.42677, -3.66739)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3e3a1f2f7e840e11dffaa35290af7e0.setIcon(icon_0fdfe256cd0a1c6e936164f1852de88a);
+            
+    
+            var marker_f4f6ebe3f63ccda8c52599a1003ce66d = L.marker(
+                [40.43295014582494, -3.695729789381323],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_519b9aeceb4603f78a18b22fee0de377 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c47b54638c06eb5c81b3f1409a02f2c9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c85a342a73aa9d071ddb8f30d859a24d = $(`<div id="html_c85a342a73aa9d071ddb8f30d859a24d" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXIII<br><b>Lugar:</b> LUA<br><b>Estilo:</b> De mercado<br><b>Fecha:</b> 2022-04-02 00:00:00<br><b>Días entre jornadas:</b> 35<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_c47b54638c06eb5c81b3f1409a02f2c9.setContent(html_c85a342a73aa9d071ddb8f30d859a24d);
+            
+        
+
+        marker_f4f6ebe3f63ccda8c52599a1003ce66d.bindPopup(popup_c47b54638c06eb5c81b3f1409a02f2c9)
+        ;
+
+        
+    
+    
+            marker_f4f6ebe3f63ccda8c52599a1003ce66d.bindTooltip(
+                `<div>
+                     (40.43295, -3.69573)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f4f6ebe3f63ccda8c52599a1003ce66d.setIcon(icon_519b9aeceb4603f78a18b22fee0de377);
+            
+    
+            var marker_ebcba6f830886dc25430c94734a1db78 = L.marker(
+                [40.4316264740489, -3.699751906268105],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_6f23378c0a442a3752b779060585ede6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce91603293fd7b576f81da8cc360867d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_40a3c56f6b1af77eab324320fa890712 = $(`<div id="html_40a3c56f6b1af77eab324320fa890712" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXIV<br><b>Lugar:</b> El Quesu<br><b>Estilo:</b> Asturiano<br><b>Fecha:</b> 2022-05-07 00:00:00<br><b>Días entre jornadas:</b> 35<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 10.0</div>`)[0];
+                popup_ce91603293fd7b576f81da8cc360867d.setContent(html_40a3c56f6b1af77eab324320fa890712);
+            
+        
+
+        marker_ebcba6f830886dc25430c94734a1db78.bindPopup(popup_ce91603293fd7b576f81da8cc360867d)
+        ;
+
+        
+    
+    
+            marker_ebcba6f830886dc25430c94734a1db78.bindTooltip(
+                `<div>
+                     (40.43163, -3.69975)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ebcba6f830886dc25430c94734a1db78.setIcon(icon_6f23378c0a442a3752b779060585ede6);
+            
+    
+            var marker_7301ea5bbc1a896e8e276171a15b5919 = L.marker(
+                [40.46080339384363, -3.6959814952795846],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_e8e600600f0231ff2d4f67a824f6cb52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f22c0f8be65a1ce71b6c5b0a6a3f1c5e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bd4e203f9d9708d0b75176ee402810d6 = $(`<div id="html_bd4e203f9d9708d0b75176ee402810d6" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXV<br><b>Lugar:</b> El Jamón y El Churrasco<br><b>Estilo:</b> Tradicional<br><b>Fecha:</b> 2022-06-18 00:00:00<br><b>Días entre jornadas:</b> 42<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 8.0<br><b>Anécdotas:</b> Sorteo "in absentia" entre Jorrín y Fer</div>`)[0];
+                popup_f22c0f8be65a1ce71b6c5b0a6a3f1c5e.setContent(html_bd4e203f9d9708d0b75176ee402810d6);
+            
+        
+
+        marker_7301ea5bbc1a896e8e276171a15b5919.bindPopup(popup_f22c0f8be65a1ce71b6c5b0a6a3f1c5e)
+        ;
+
+        
+    
+    
+            marker_7301ea5bbc1a896e8e276171a15b5919.bindTooltip(
+                `<div>
+                     (40.46080, -3.69598)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7301ea5bbc1a896e8e276171a15b5919.setIcon(icon_e8e600600f0231ff2d4f67a824f6cb52);
+            
+    
+            var marker_e91b9662d9ede3c31e3747141a8fc8d4 = L.marker(
+                [40.4160084411651, -3.7081642039231326],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_ddd802b731e0fbdbbee8e118da8a7334 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99088b687c2417494db9873aef79969d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_de692606841210ed166907e3731b76fe = $(`<div id="html_de692606841210ed166907e3731b76fe" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXVI<br><b>Lugar:</b> Arrabal<br><b>Estilo:</b> De mercado<br><b>Fecha:</b> 2022-07-02 00:00:00<br><b>Días entre jornadas:</b> 14<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_99088b687c2417494db9873aef79969d.setContent(html_de692606841210ed166907e3731b76fe);
+            
+        
+
+        marker_e91b9662d9ede3c31e3747141a8fc8d4.bindPopup(popup_99088b687c2417494db9873aef79969d)
+        ;
+
+        
+    
+    
+            marker_e91b9662d9ede3c31e3747141a8fc8d4.bindTooltip(
+                `<div>
+                     (40.41601, -3.70816)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e91b9662d9ede3c31e3747141a8fc8d4.setIcon(icon_ddd802b731e0fbdbbee8e118da8a7334);
+            
+    
+            var marker_d20817a42f119122eadfae7f9574a165 = L.marker(
+                [40.443023562094034, -3.6956766208290937],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_aa1beed48abaa5578da4d5eaef919841 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_27c6b01484d811c1b7a91fffec6e5c99 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_67708ef1bc221f45d9aeba8dd6cc1cf9 = $(`<div id="html_67708ef1bc221f45d9aeba8dd6cc1cf9" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXVII<br><b>Lugar:</b> Korea<br><b>Estilo:</b> Coreano<br><b>Fecha:</b> 2022-10-29 00:00:00<br><b>Días entre jornadas:</b> 119<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 9.0<br><b>Anécdotas:</b> Originalmente convocadas el 10/09/2022 en O'Pazo, se pospusieron</div>`)[0];
+                popup_27c6b01484d811c1b7a91fffec6e5c99.setContent(html_67708ef1bc221f45d9aeba8dd6cc1cf9);
+            
+        
+
+        marker_d20817a42f119122eadfae7f9574a165.bindPopup(popup_27c6b01484d811c1b7a91fffec6e5c99)
+        ;
+
+        
+    
+    
+            marker_d20817a42f119122eadfae7f9574a165.bindTooltip(
+                `<div>
+                     (40.44302, -3.69568)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d20817a42f119122eadfae7f9574a165.setIcon(icon_aa1beed48abaa5578da4d5eaef919841);
+            
+    
+            var marker_839496ecd9a5498e8b7e290d083fd074 = L.marker(
+                [40.46796848282783, -3.6810579492500226],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_515374a290a1f08463c61d1b1fb75fc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_796f6e8db5d5d2533d1e56eb4c6bb345 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_220952fbc8772a9ea2dd6b112e0fa483 = $(`<div id="html_220952fbc8772a9ea2dd6b112e0fa483" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXVIII<br><b>Lugar:</b> Sal Negra<br><b>Estilo:</b> Mediterranea<br><b>Fecha:</b> 2023-01-28 00:00:00<br><b>Días entre jornadas:</b> 91<br><b>Ronda:</b> 3.0<br><b>Pax:</b> 11.0</div>`)[0];
+                popup_796f6e8db5d5d2533d1e56eb4c6bb345.setContent(html_220952fbc8772a9ea2dd6b112e0fa483);
+            
+        
+
+        marker_839496ecd9a5498e8b7e290d083fd074.bindPopup(popup_796f6e8db5d5d2533d1e56eb4c6bb345)
+        ;
+
+        
+    
+    
+            marker_839496ecd9a5498e8b7e290d083fd074.bindTooltip(
+                `<div>
+                     (40.46797, -3.68106)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_839496ecd9a5498e8b7e290d083fd074.setIcon(icon_515374a290a1f08463c61d1b1fb75fc0);
+            
+    
+            var marker_27c5894b9695e054ef7219e7d867ab65 = L.marker(
+                [40.422378357974296, -3.690598859744915],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_764f1272a5ddea9ff092a60a5d003eb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c78a5d289c6c51d6710f66a7bf75a83f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b51e9ff9a86f28e2ab4df3fa7034fa14 = $(`<div id="html_b51e9ff9a86f28e2ab4df3fa7034fa14" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXIX<br><b>Lugar:</b> Pelotari<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2023-02-25 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 4.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_c78a5d289c6c51d6710f66a7bf75a83f.setContent(html_b51e9ff9a86f28e2ab4df3fa7034fa14);
+            
+        
+
+        marker_27c5894b9695e054ef7219e7d867ab65.bindPopup(popup_c78a5d289c6c51d6710f66a7bf75a83f)
+        ;
+
+        
+    
+    
+            marker_27c5894b9695e054ef7219e7d867ab65.bindTooltip(
+                `<div>
+                     (40.42238, -3.69060)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_27c5894b9695e054ef7219e7d867ab65.setIcon(icon_764f1272a5ddea9ff092a60a5d003eb6);
+            
+    
+            var marker_7a4e2091106c8685793cedfd5982d2a2 = L.marker(
+                [40.38260106736055, -3.6959512615961825],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_27c8d36b80f880cb69f9321e209baf1f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46d56591f3344ddff6ce6ab6e050a9fe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e418d22d87ce071deb146dfd78fcdfce = $(`<div id="html_e418d22d87ce071deb146dfd78fcdfce" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXX<br><b>Lugar:</b> El Carbón de Granada<br><b>Estilo:</b> Parrilla<br><b>Fecha:</b> 2023-03-25 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 4.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_46d56591f3344ddff6ce6ab6e050a9fe.setContent(html_e418d22d87ce071deb146dfd78fcdfce);
+            
+        
+
+        marker_7a4e2091106c8685793cedfd5982d2a2.bindPopup(popup_46d56591f3344ddff6ce6ab6e050a9fe)
+        ;
+
+        
+    
+    
+            marker_7a4e2091106c8685793cedfd5982d2a2.bindTooltip(
+                `<div>
+                     (40.38260, -3.69595)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a4e2091106c8685793cedfd5982d2a2.setIcon(icon_27c8d36b80f880cb69f9321e209baf1f);
+            
+    
+            var marker_fb0bf3a9b0dd7802227452d58a47eb90 = L.marker(
+                [40.41956719221514, -3.6741602155672632],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_df0ab9bc306a5c06d398085d47e18e0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fff2e48aedb1b48e4aab4e537559f901 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36ab883d3ecc6abbf106c700780a8592 = $(`<div id="html_36ab883d3ecc6abbf106c700780a8592" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXXI<br><b>Lugar:</b> Ogrelo<br><b>Estilo:</b> Gallego<br><b>Fecha:</b> 2023-04-22 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 4.0<br><b>Pax:</b> 10.0</div>`)[0];
+                popup_fff2e48aedb1b48e4aab4e537559f901.setContent(html_36ab883d3ecc6abbf106c700780a8592);
+            
+        
+
+        marker_fb0bf3a9b0dd7802227452d58a47eb90.bindPopup(popup_fff2e48aedb1b48e4aab4e537559f901)
+        ;
+
+        
+    
+    
+            marker_fb0bf3a9b0dd7802227452d58a47eb90.bindTooltip(
+                `<div>
+                     (40.41957, -3.67416)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fb0bf3a9b0dd7802227452d58a47eb90.setIcon(icon_df0ab9bc306a5c06d398085d47e18e0f);
+            
+    
+            var marker_87f4c6030817c3ccda50df565e6521bf = L.marker(
+                [40.42551700974785, -3.7139414413198355],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_3a0ef4d648da6bdfd70c95d72b755bc2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77e33b9e7509d4310f90d0f4d50e68ea = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc7c531b63d7a5495a41be08acadfa5d = $(`<div id="html_bc7c531b63d7a5495a41be08acadfa5d" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXXII<br><b>Lugar:</b> Dantxari<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2023-05-20 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 4.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_77e33b9e7509d4310f90d0f4d50e68ea.setContent(html_bc7c531b63d7a5495a41be08acadfa5d);
+            
+        
+
+        marker_87f4c6030817c3ccda50df565e6521bf.bindPopup(popup_77e33b9e7509d4310f90d0f4d50e68ea)
+        ;
+
+        
+    
+    
+            marker_87f4c6030817c3ccda50df565e6521bf.bindTooltip(
+                `<div>
+                     (40.42552, -3.71394)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_87f4c6030817c3ccda50df565e6521bf.setIcon(icon_3a0ef4d648da6bdfd70c95d72b755bc2);
+            
+    
+            var marker_db9d7b44639231f3448945e8d3cd6f5d = L.marker(
+                [40.41838990821838, -3.689948376936392],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_41072728d7d7c0fda903d76f1e051048 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa42d9b917851bbeb1a68e349db198cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0efcc93f384d60157873b08fdc5cb7e0 = $(`<div id="html_0efcc93f384d60157873b08fdc5cb7e0" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXXIII<br><b>Lugar:</b> Alabaster<br><b>Estilo:</b> Gallego<br><b>Fecha:</b> 2023-06-03 00:00:00<br><b>Días entre jornadas:</b> 14<br><b>Ronda:</b> 4.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_aa42d9b917851bbeb1a68e349db198cf.setContent(html_0efcc93f384d60157873b08fdc5cb7e0);
+            
+        
+
+        marker_db9d7b44639231f3448945e8d3cd6f5d.bindPopup(popup_aa42d9b917851bbeb1a68e349db198cf)
+        ;
+
+        
+    
+    
+            marker_db9d7b44639231f3448945e8d3cd6f5d.bindTooltip(
+                `<div>
+                     (40.41839, -3.68995)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db9d7b44639231f3448945e8d3cd6f5d.setIcon(icon_41072728d7d7c0fda903d76f1e051048);
+            
+    
+            var marker_378bad6a811a82138fc2ebdd2a9f0c6e = L.marker(
+                [40.49776934528029, -3.687005359740663],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_7c6fe00b822496897c1275963bab0e33 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5373ef4dfa869062410e6de9916790f4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_47b39f3756a9f8e7e2c3647ccae76fc0 = $(`<div id="html_47b39f3756a9f8e7e2c3647ccae76fc0" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXXIV<br><b>Lugar:</b> Casa Pedro<br><b>Estilo:</b> Tradicional<br><b>Fecha:</b> 2023-09-02 00:00:00<br><b>Días entre jornadas:</b> 91<br><b>Ronda:</b> 4.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_5373ef4dfa869062410e6de9916790f4.setContent(html_47b39f3756a9f8e7e2c3647ccae76fc0);
+            
+        
+
+        marker_378bad6a811a82138fc2ebdd2a9f0c6e.bindPopup(popup_5373ef4dfa869062410e6de9916790f4)
+        ;
+
+        
+    
+    
+            marker_378bad6a811a82138fc2ebdd2a9f0c6e.bindTooltip(
+                `<div>
+                     (40.49777, -3.68701)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_378bad6a811a82138fc2ebdd2a9f0c6e.setIcon(icon_7c6fe00b822496897c1275963bab0e33);
+            
+    
+            var marker_8e92e1bcf68c8024927a8e2efb84be09 = L.marker(
+                [40.464066453185, -3.693297058402232],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_8cc6a47829b76cb405204621f39aeb0d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_faf0c8d580ce7489edaf762391caed4b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3bdf8f2699d2e4acb1e14ccb7631ba1b = $(`<div id="html_3bdf8f2699d2e4acb1e14ccb7631ba1b" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXXV<br><b>Lugar:</b> Casa Juan<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2023-10-21 00:00:00<br><b>Días entre jornadas:</b> 49<br><b>Ronda:</b> 4.0<br><b>Pax:</b> 10.0<br><b>Anécdotas:</b> Jornada conmemorativa 35ª edición. Elegida por votación.</div>`)[0];
+                popup_faf0c8d580ce7489edaf762391caed4b.setContent(html_3bdf8f2699d2e4acb1e14ccb7631ba1b);
+            
+        
+
+        marker_8e92e1bcf68c8024927a8e2efb84be09.bindPopup(popup_faf0c8d580ce7489edaf762391caed4b)
+        ;
+
+        
+    
+    
+            marker_8e92e1bcf68c8024927a8e2efb84be09.bindTooltip(
+                `<div>
+                     (40.46407, -3.69330)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e92e1bcf68c8024927a8e2efb84be09.setIcon(icon_8cc6a47829b76cb405204621f39aeb0d);
+            
+    
+            var marker_6b25d028b75c619d339f438e35c8762f = L.marker(
+                [40.44309519524308, -3.6822882414346805],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_b2092b5b826130824486624bab9cfd61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b350a794082b3b4939220b9f37f3c08c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c39fa529d641087e96d5aeb3b9db31e7 = $(`<div id="html_c39fa529d641087e96d5aeb3b9db31e7" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXXVI<br><b>Lugar:</b> Urrechu Velazquez<br><b>Estilo:</b> Vasco<br><b>Fecha:</b> 2023-11-04 00:00:00<br><b>Días entre jornadas:</b> 14<br><b>Ronda:</b> 4.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_b350a794082b3b4939220b9f37f3c08c.setContent(html_c39fa529d641087e96d5aeb3b9db31e7);
+            
+        
+
+        marker_6b25d028b75c619d339f438e35c8762f.bindPopup(popup_b350a794082b3b4939220b9f37f3c08c)
+        ;
+
+        
+    
+    
+            marker_6b25d028b75c619d339f438e35c8762f.bindTooltip(
+                `<div>
+                     (40.44310, -3.68229)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b25d028b75c619d339f438e35c8762f.setIcon(icon_b2092b5b826130824486624bab9cfd61);
+            
+    
+            var marker_7992fd659c232f5bd6e4c8cb72b0cb02 = L.marker(
+                [40.392757254214175, -3.6801632615955935],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_84db47c161820c90546ce731768141b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05bda9f8cc3b3dd3c931c0d688f116d7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ebed45abd04704d65d708f50dd0451b = $(`<div id="html_8ebed45abd04704d65d708f50dd0451b" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXXVII<br><b>Lugar:</b> In-Pulso<br><b>Fecha:</b> 2024-01-27 00:00:00<br><b>Días entre jornadas:</b> 84<br><b>Ronda:</b> 4.0<br><b>Pax:</b> 6.0<br><b>Anécdotas:</b> Salió ganador en el último sorteo Carlos, pero no podía elegir y el otro finalista (Jorrín) eligió</div>`)[0];
+                popup_05bda9f8cc3b3dd3c931c0d688f116d7.setContent(html_8ebed45abd04704d65d708f50dd0451b);
+            
+        
+
+        marker_7992fd659c232f5bd6e4c8cb72b0cb02.bindPopup(popup_05bda9f8cc3b3dd3c931c0d688f116d7)
+        ;
+
+        
+    
+    
+            marker_7992fd659c232f5bd6e4c8cb72b0cb02.bindTooltip(
+                `<div>
+                     (40.39276, -3.68016)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7992fd659c232f5bd6e4c8cb72b0cb02.setIcon(icon_84db47c161820c90546ce731768141b5);
+            
+    
+            var marker_37c4f310e7474930b76f4c3c50e67504 = L.marker(
+                [40.42400875937361, -3.6864780885804027],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_0e847e53d61cc0fd3f70e927e9923dbd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_02dfce54ed9ea4d84b985f5b38f7d388 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_858aaa00f12198c9a7836579c70058d4 = $(`<div id="html_858aaa00f12198c9a7836579c70058d4" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXXVIII<br><b>Lugar:</b> Lobito de Mar<br><b>Estilo:</b> Andaluz<br><b>Fecha:</b> 2024-02-24 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_02dfce54ed9ea4d84b985f5b38f7d388.setContent(html_858aaa00f12198c9a7836579c70058d4);
+            
+        
+
+        marker_37c4f310e7474930b76f4c3c50e67504.bindPopup(popup_02dfce54ed9ea4d84b985f5b38f7d388)
+        ;
+
+        
+    
+    
+            marker_37c4f310e7474930b76f4c3c50e67504.bindTooltip(
+                `<div>
+                     (40.42401, -3.68648)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_37c4f310e7474930b76f4c3c50e67504.setIcon(icon_0e847e53d61cc0fd3f70e927e9923dbd);
+            
+    
+            var marker_1d927e7f1c413984bd4b7214f1a8aae7 = L.marker(
+                [40.43117853757947, -3.7100897904290497],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_7319e01a12139c287e2ac441a0d47b91 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_953773016c2c8acf67c38dddf19e4966 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_efb5685ed9caf6d9bf5cde1b815d7413 = $(`<div id="html_efb5685ed9caf6d9bf5cde1b815d7413" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XXXIX<br><b>Lugar:</b> Fuoko<br><b>Estilo:</b> Italiano<br><b>Fecha:</b> 2024-04-27 00:00:00<br><b>Días entre jornadas:</b> 63<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_953773016c2c8acf67c38dddf19e4966.setContent(html_efb5685ed9caf6d9bf5cde1b815d7413);
+            
+        
+
+        marker_1d927e7f1c413984bd4b7214f1a8aae7.bindPopup(popup_953773016c2c8acf67c38dddf19e4966)
+        ;
+
+        
+    
+    
+            marker_1d927e7f1c413984bd4b7214f1a8aae7.bindTooltip(
+                `<div>
+                     (40.43118, -3.71009)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1d927e7f1c413984bd4b7214f1a8aae7.setIcon(icon_7319e01a12139c287e2ac441a0d47b91);
+            
+    
+            var marker_31e6ca463405dadede74c5ae43198810 = L.marker(
+                [40.43164066099715, -3.677374991592854],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_dd8e81e493d21f2cd2fd9ce76ae21640 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_95ed87418caf0a06411f6772d997b7df = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a987decc4bbe280e0a947bc6b3bec581 = $(`<div id="html_a987decc4bbe280e0a947bc6b3bec581" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XL<br><b>Lugar:</b> Casa Carola<br><b>Estilo:</b> Cocido<br><b>Fecha:</b> 2024-05-25 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_95ed87418caf0a06411f6772d997b7df.setContent(html_a987decc4bbe280e0a947bc6b3bec581);
+            
+        
+
+        marker_31e6ca463405dadede74c5ae43198810.bindPopup(popup_95ed87418caf0a06411f6772d997b7df)
+        ;
+
+        
+    
+    
+            marker_31e6ca463405dadede74c5ae43198810.bindTooltip(
+                `<div>
+                     (40.43164, -3.67737)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31e6ca463405dadede74c5ae43198810.setIcon(icon_dd8e81e493d21f2cd2fd9ce76ae21640);
+            
+    
+            var marker_789b66c13e89e57c3ba56b70f0748a82 = L.marker(
+                [40.40779601214147, -3.6801784885813507],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_3193da8ee279b7b9240215b0db460a37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a4717c2b7e4a9d13966e4df9450828a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3812328d3b75f18dafc075d2a0899bdf = $(`<div id="html_3812328d3b75f18dafc075d2a0899bdf" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XLI<br><b>Lugar:</b> Don Giovanni<br><b>Estilo:</b> Italiano<br><b>Fecha:</b> 2024-06-28 00:00:00<br><b>Días entre jornadas:</b> 34<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_0a4717c2b7e4a9d13966e4df9450828a.setContent(html_3812328d3b75f18dafc075d2a0899bdf);
+            
+        
+
+        marker_789b66c13e89e57c3ba56b70f0748a82.bindPopup(popup_0a4717c2b7e4a9d13966e4df9450828a)
+        ;
+
+        
+    
+    
+            marker_789b66c13e89e57c3ba56b70f0748a82.bindTooltip(
+                `<div>
+                     (40.40780, -3.68018)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_789b66c13e89e57c3ba56b70f0748a82.setIcon(icon_3193da8ee279b7b9240215b0db460a37);
+            
+    
+            var marker_05a4458878d6ebd3f62c4fb675202887 = L.marker(
+                [40.43792991710677, -3.6884757039218825],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_10a4a470aebc15107b08fe3433dc76b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5518851bad90c3cb28acfd41610750f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d8eaea11d2efa04037f729ce305627dd = $(`<div id="html_d8eaea11d2efa04037f729ce305627dd" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XLII<br><b>Lugar:</b> Le Chinois<br><b>Estilo:</b> Chino<br><b>Fecha:</b> 2024-11-02 00:00:00<br><b>Días entre jornadas:</b> 127<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 7.0</div>`)[0];
+                popup_f5518851bad90c3cb28acfd41610750f.setContent(html_d8eaea11d2efa04037f729ce305627dd);
+            
+        
+
+        marker_05a4458878d6ebd3f62c4fb675202887.bindPopup(popup_f5518851bad90c3cb28acfd41610750f)
+        ;
+
+        
+    
+    
+            marker_05a4458878d6ebd3f62c4fb675202887.bindTooltip(
+                `<div>
+                     (40.43793, -3.68848)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_05a4458878d6ebd3f62c4fb675202887.setIcon(icon_10a4a470aebc15107b08fe3433dc76b6);
+            
+    
+            var marker_d0b56de1d58748caa1f08d5743a915d6 = L.marker(
+                [40.41363538393173, -3.7104985432824518],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_086f8e800bcdf7dda21bd7d1b833ddc7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_977fe8d6811a52f57be111f92ff230ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eac3d4852b1246b6c1842791df3f1df5 = $(`<div id="html_eac3d4852b1246b6c1842791df3f1df5" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XLIII<br><b>Lugar:</b> D'stapa<br><b>Estilo:</b> Arroceria<br><b>Fecha:</b> 2025-01-25 00:00:00<br><b>Días entre jornadas:</b> 84<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 9.0</div>`)[0];
+                popup_977fe8d6811a52f57be111f92ff230ed.setContent(html_eac3d4852b1246b6c1842791df3f1df5);
+            
+        
+
+        marker_d0b56de1d58748caa1f08d5743a915d6.bindPopup(popup_977fe8d6811a52f57be111f92ff230ed)
+        ;
+
+        
+    
+    
+            marker_d0b56de1d58748caa1f08d5743a915d6.bindTooltip(
+                `<div>
+                     (40.41364, -3.71050)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0b56de1d58748caa1f08d5743a915d6.setIcon(icon_086f8e800bcdf7dda21bd7d1b833ddc7);
+            
+    
+            var marker_d213e000e136a47d4ea262c8a38d520c = L.marker(
+                [40.4180845624822, -3.6764400952958587],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_6584ae6b7f9f82b35c3dbed7c217a560 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aab812233bf0a55bdffff260e64fdc86 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c8c1f37b9865d8cedc6039e75891bf83 = $(`<div id="html_c8c1f37b9865d8cedc6039e75891bf83" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XLIV<br><b>Lugar:</b> Restaurante Rafa<br><b>Estilo:</b> Tradicional<br><b>Fecha:</b> 2025-02-22 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 9.0</div>`)[0];
+                popup_aab812233bf0a55bdffff260e64fdc86.setContent(html_c8c1f37b9865d8cedc6039e75891bf83);
+            
+        
+
+        marker_d213e000e136a47d4ea262c8a38d520c.bindPopup(popup_aab812233bf0a55bdffff260e64fdc86)
+        ;
+
+        
+    
+    
+            marker_d213e000e136a47d4ea262c8a38d520c.bindTooltip(
+                `<div>
+                     (40.41808, -3.67644)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d213e000e136a47d4ea262c8a38d520c.setIcon(icon_6584ae6b7f9f82b35c3dbed7c217a560);
+            
+    
+            var marker_f5f32970fd71f45e8ca688917cf711cd = L.marker(
+                [40.4558592263147, -3.6885079155652067],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_0d0788dec50d0dd6231f477a3b4b0d14 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f37818ef12097731846053c71e84bd7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9ec64f97f255a6fa884c2492e52eb582 = $(`<div id="html_9ec64f97f255a6fa884c2492e52eb582" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XLV<br><b>Lugar:</b> Materia Prima<br><b>Estilo:</b> De mercado<br><b>Fecha:</b> 2025-03-22 00:00:00<br><b>Días entre jornadas:</b> 28<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 12.0</div>`)[0];
+                popup_5f37818ef12097731846053c71e84bd7.setContent(html_9ec64f97f255a6fa884c2492e52eb582);
+            
+        
+
+        marker_f5f32970fd71f45e8ca688917cf711cd.bindPopup(popup_5f37818ef12097731846053c71e84bd7)
+        ;
+
+        
+    
+    
+            marker_f5f32970fd71f45e8ca688917cf711cd.bindTooltip(
+                `<div>
+                     (40.45586, -3.68851)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f5f32970fd71f45e8ca688917cf711cd.setIcon(icon_0d0788dec50d0dd6231f477a3b4b0d14);
+            
+    
+            var marker_a2d5e7d555665fe4dff41b3d546acbba = L.marker(
+                [40.46400297230885, -3.6933958120361674],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_2a21bd90e9ec277250f11756374fc949 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46634346ed81d5093daa8d1c947c3def = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_deb827c96bd9db9470e523b6676da4af = $(`<div id="html_deb827c96bd9db9470e523b6676da4af" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XLVI<br><b>Lugar:</b> Arroces de Segis<br><b>Estilo:</b> Arroceria<br><b>Fecha:</b> 2025-04-26 00:00:00<br><b>Días entre jornadas:</b> 35<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 12.0</div>`)[0];
+                popup_46634346ed81d5093daa8d1c947c3def.setContent(html_deb827c96bd9db9470e523b6676da4af);
+            
+        
+
+        marker_a2d5e7d555665fe4dff41b3d546acbba.bindPopup(popup_46634346ed81d5093daa8d1c947c3def)
+        ;
+
+        
+    
+    
+            marker_a2d5e7d555665fe4dff41b3d546acbba.bindTooltip(
+                `<div>
+                     (40.46400, -3.69340)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a2d5e7d555665fe4dff41b3d546acbba.setIcon(icon_2a21bd90e9ec277250f11756374fc949);
+            
+    
+            var marker_d84d66b481aca00a5da702475a979f42 = L.marker(
+                [40.47258621774563, -3.690116121499051],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_d8260ff38075cae3e15191d5427f80da = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5ac303ba6664b320b93a1ef1251a428c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ee5a1344abee19fc0f83948049c3a3a3 = $(`<div id="html_ee5a1344abee19fc0f83948049c3a3a3" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XLVII<br><b>Lugar:</b> CaboPalos<br><b>Estilo:</b> Mediterranea<br><b>Fecha:</b> 2025-06-07 00:00:00<br><b>Días entre jornadas:</b> 42<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_5ac303ba6664b320b93a1ef1251a428c.setContent(html_ee5a1344abee19fc0f83948049c3a3a3);
+            
+        
+
+        marker_d84d66b481aca00a5da702475a979f42.bindPopup(popup_5ac303ba6664b320b93a1ef1251a428c)
+        ;
+
+        
+    
+    
+            marker_d84d66b481aca00a5da702475a979f42.bindTooltip(
+                `<div>
+                     (40.47259, -3.69012)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d84d66b481aca00a5da702475a979f42.setIcon(icon_d8260ff38075cae3e15191d5427f80da);
+            
+    
+            var marker_6cabd06bfdba323b64116378e94941db = L.marker(
+                [40.476426400532844, -3.6390165245594033],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_7bdaa877af247e5bc81714ea61b81889 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_991179aca4e23c8a1cf5f38df853e680 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_599c86b6876f387562c39fcc2db50043 = $(`<div id="html_599c86b6876f387562c39fcc2db50043" style="width: 100.0%; height: 100.0%;"><b>Número:</b> XLVIII<br><b>Lugar:</b> Miño <br><b>Estilo:</b> Gallego<br><b>Fecha:</b> 2025-07-12 00:00:00<br><b>Días entre jornadas:</b> 35<br><b>Ronda:</b> 5.0<br><b>Pax:</b> 8.0</div>`)[0];
+                popup_991179aca4e23c8a1cf5f38df853e680.setContent(html_599c86b6876f387562c39fcc2db50043);
+            
+        
+
+        marker_6cabd06bfdba323b64116378e94941db.bindPopup(popup_991179aca4e23c8a1cf5f38df853e680)
+        ;
+
+        
+    
+    
+            marker_6cabd06bfdba323b64116378e94941db.bindTooltip(
+                `<div>
+                     (40.47643, -3.63902)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6cabd06bfdba323b64116378e94941db.setIcon(icon_7bdaa877af247e5bc81714ea61b81889);
+            
+    
+            var marker_3dbc035565e2c309cb7900504b458528 = L.marker(
+                [40.4449576657957, -3.703175459743655],
+                {
+}
+            ).addTo(feature_group_6323ab5a86ccaf86daa4847060146a95);
+        
+    
+            var icon_62692205f09242c639bcc00dcc8f77b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e0e65caca5e2314f2b66dbd6bef5441c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_462465890b5b93917d392ab3aa537c41 = $(`<div id="html_462465890b5b93917d392ab3aa537c41" style="width: 100.0%; height: 100.0%;"><b>Número:</b> L<br><b>Lugar:</b> La Gran Tasca<br><b>Estilo:</b> Cocido<br><b>Fecha:</b> 2025-10-18 00:00:00<br><b>Días entre jornadas:</b> 21<br><b>Ronda:</b> 6.0<br><b>Pax:</b> 13.0<br><b>Anécdotas:</b> Elección colegiada</div>`)[0];
+                popup_e0e65caca5e2314f2b66dbd6bef5441c.setContent(html_462465890b5b93917d392ab3aa537c41);
+            
+        
+
+        marker_3dbc035565e2c309cb7900504b458528.bindPopup(popup_e0e65caca5e2314f2b66dbd6bef5441c)
+        ;
+
+        
+    
+    
+            marker_3dbc035565e2c309cb7900504b458528.bindTooltip(
+                `<div>
+                     (40.44496, -3.70318)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3dbc035565e2c309cb7900504b458528.setIcon(icon_62692205f09242c639bcc00dcc8f77b7);
+            
+    
+            feature_group_6323ab5a86ccaf86daa4847060146a95.addTo(map_097e8e8b68a2502be71187bda0af30dc);
+        
+    
+            map_097e8e8b68a2502be71187bda0af30dc.fitBounds(
+                [[40.379810662031026, -3.6229668862897695], [40.464066453185, -3.693297058402232], [40.42622472364123, -3.6843085076928674], [40.57010802944083, -3.9247733406244683], [40.46200554000889, -3.695607537607931], [40.414319139167624, -3.707990505772206], [40.12641140043059, -3.8462840674362666], [40.46771663165081, -3.6536379900441482], [40.41231252809066, -3.7096356259826697], [40.42989944919919, -3.6786483266767434], [40.42397235948419, -3.685697215566995], [40.44309519524308, -3.6822882414346805], [40.51806124182326, -3.655303857330146], [40.413050194446626, -3.7087884259823896], [40.46287764133158, -3.6939307480983112], [40.45709854134766, -3.6918729462496236], [40.46262663683855, -3.6921038915808935], [40.40504384710308, -3.6833510039237543], [40.464066453185, -3.693297058402232], [40.42651618453682, -3.6785889309091444], [40.46379538558938, -3.6888685879960903], [40.4267652182012, -3.6673938615936783], [40.43295014582494, -3.695729789381323], [40.4316264740489, -3.699751906268105], [40.46080339384363, -3.6959814952795846], [40.4160084411651, -3.7081642039231326], [40.443023562094034, -3.6956766208290937], [40.46796848282783, -3.6810579492500226], [40.422378357974296, -3.690598859744915], [40.38260106736055, -3.6959512615961825], [40.41956719221514, -3.6741602155672632], [40.42551700974785, -3.7139414413198355], [40.41838990821838, -3.689948376936392], [40.49776934528029, -3.687005359740663], [40.464066453185, -3.693297058402232], [40.44309519524308, -3.6822882414346805], [40.392757254214175, -3.6801632615955935], [40.42400875937361, -3.6864780885804027], [40.43117853757947, -3.7100897904290497], [40.43164066099715, -3.677374991592854], [40.40779601214147, -3.6801784885813507], [40.43792991710677, -3.6884757039218825], [40.41363538393173, -3.7104985432824518], [40.4180845624822, -3.6764400952958587], [40.4558592263147, -3.6885079155652067], [40.46400297230885, -3.6933958120361674], [40.47258621774563, -3.690116121499051], [40.476426400532844, -3.6390165245594033], [40.4449576657957, -3.703175459743655]],
+                {}
+            );
+        
+</script>
+</html>
