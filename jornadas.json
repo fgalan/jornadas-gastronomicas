@@ -1,6 +1,5 @@
 {
-	"excel_path":     "~/OneDrive/Escritorio/datosjornadas.xlsx",
-	"excel_filename": "datosjornadas.xlsx",
+	"excel_path":     "~/OneDrive/Documents/JornadasGastronomicas.xlsx",
 	"table_name":     "Jornadas",
 	"coords_col":     "Coords",
 	"output_map":     "mapa_jornadas.html",
