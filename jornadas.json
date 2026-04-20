@@ -3,6 +3,7 @@
 	"table_name":     "Jornadas",
 	"coords_col":     "Coords",
 	"output_map":     "mapa_jornadas.html",
+	"skip_fields":    [ "Elector", "Asistentes" ],
 	"show_markers":   true,
 	"show_heatmap":   false
 }

@@ -30,6 +30,7 @@ JSON config format (all keys optional):
     "table_name":     "Jornadas",
     "coords_col":     "Coords",
     "output_map":     "mapa_jornadas.html",
+    "skip_fields":    ["Elector", "Asistentes"],
     "show_markers":   true,
     "show_heatmap":   true
   }
@@ -111,6 +112,8 @@ def build_config() -> dict:
     parser.add_argument("--output_map",     metavar="FILE",
                         help="Output HTML filename, saved next to the Excel file. "
                              f'(default: {DEFAULTS["output_map"]})')
+    parser.add_argument("--skip_fields",    metavar="FIELDS", type=str,
+                        help="List of comma-separated column names to exclude from marker popups.")
     parser.add_argument("--show_markers",   metavar="BOOL", type=parse_bool,
                         help=f'Show individual markers. true/false (default: {DEFAULTS["show_markers"]})')
     parser.add_argument("--show_heatmap",   metavar="BOOL", type=parse_bool,
@@ -120,6 +123,10 @@ def build_config() -> dict:
 
     # Start from built-in defaults
     cfg = dict(DEFAULTS)
+
+    # From comma separted to array of strings in skip_fields
+    if args.skip_fields:
+        cfg["skip_fields"] = [field.strip() for field in args.skip_fields.split(",") if field.strip()]
 
     # Layer JSON config on top
     if args.config:
@@ -192,7 +199,7 @@ def parse_coords(value) -> tuple[float, float] | None:
 
 
 def build_map(df: pd.DataFrame, coords_col: str,
-              show_markers: bool, show_heatmap: bool) -> folium.Map:
+              show_markers: bool, show_heatmap: bool, skip_fields: list[str]) -> folium.Map:
     if not show_markers and not show_heatmap:
         sys.exit("❌  Both show_markers and show_heatmap are False. Enable at least one.")
 
@@ -209,7 +216,7 @@ def build_map(df: pd.DataFrame, coords_col: str,
         popup_html = "<br>".join(
             f"<b>{col}:</b> {row[col]}"
             for col in df.columns
-            if col != coords_col and pd.notna(row[col])
+            if col not in skip_fields and col != coords_col and pd.notna(row[col])
         )
         points.append((lat, lon, popup_html or f"Punto {idx}"))
 
@@ -273,7 +280,7 @@ def main():
     print(f"🗺️   Rendering: {' + '.join(modes)}")
 
     output_path = os.path.join(os.path.dirname(excel_path), cfg["output_map"])
-    m = build_map(df, cfg["coords_col"], cfg["show_markers"], cfg["show_heatmap"])
+    m = build_map(df, cfg["coords_col"], cfg["show_markers"], cfg["show_heatmap"], cfg["skip_fields"])
     m.save(output_path)
     print(f"✅  Map saved → {output_path}")
     print("    Open it in any web browser to view your points.")
