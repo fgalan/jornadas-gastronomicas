@@ -58,16 +58,17 @@ Parameters can be set in three ways, listed from highest to lowest priority:
 
 ### All parameters
 
-| Parameter        | Required | Default                    | Description                                              |
-|------------------|----------|----------------------------|----------------------------------------------------------|
-| `dir`  | Yes      | `~/OneDrive/Documents`     | Folder where the Excel file is located                   |
-| `excel_filename` | Yes      | `your_file.xlsx`           | Excel filename within `dir`                    |
-| `excel_path`     | No       | derived from above         | Full path to the Excel file; overrides the two above     |
-| `table_name`     | Yes      | `Jornadas`                 | Name of the Excel table or sheet to read                 |
-| `coords_col`     | No       | `Coords`                   | Column containing `"lat,lon"` coordinate strings         |
-| `output_map`     | No       | `mapa_jornadas.html`       | Output filename; saved in the same folder as the Excel file |
-| `show_markers`   | No       | `true`                     | Render a clickable marker for each location              |
-| `show_heatmap`   | No       | `true`                     | Render a density heatmap layer                           |
+| Parameter        | Required | Default                    | Description                                                                                 |
+|------------------|----------|----------------------------|---------------------------------------------------------------------------------------------|
+| `dir`  | Yes      | `~/OneDrive/Documents`     | Folder where the Excel file is located                                                      |
+| `excel_filename` | Yes      | `your_file.xlsx`           | Excel filename within `dir`                                                                 |
+| `excel_path`     | No       | derived from above         | Full path to the Excel file; overrides the two above                                        |
+| `table_name`     | Yes      | `Jornadas`                 | Name of the Excel table or sheet to read                                                    |
+| `coords_col`     | No       | `Coords`                   | Column containing `"lat,lon"` coordinate strings                                            |
+| `output_map`     | No       | `mapa_jornadas.html`       | Output filename; saved in the same folder as the Excel file                                 |
+| `skip_fields`    | No       | `[]`                       | Skip fields to include in pop up markers |
+| `show_markers`   | No       | `true`                     | Render a clickable marker for each location                                                 |
+| `show_heatmap`   | No       | `true`                     | Render a density heatmap layer                                                              |
 
 ---
 
